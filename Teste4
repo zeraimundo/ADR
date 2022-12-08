@@ -38,12 +38,12 @@ int
 main (int argc, char *argv[])
 {
   bool verbose = true;
-  uint32_t nCsma1 = 2;
-  uint32_t nCsma2 = 2;
+//  uint32_t nCsma1 = 2;
+//  uint32_t nCsma2 = 2;
 
   CommandLine cmd (__FILE__);
-  cmd.AddValue ("nCsma", "Number of \"extra\" CSMA nodes/devices", nCsma1);
-  cmd.AddValue ("nCsma", "Number of \"extra\" CSMA nodes/devices", nCsma2);
+//  cmd.AddValue ("nCsma", "Number of \"extra\" CSMA nodes/devices", nCsma1);
+//  cmd.AddValue ("nCsma", "Number of \"extra\" CSMA nodes/devices", nCsma2);
   cmd.AddValue ("verbose", "Tell echo applications to log if true", verbose);
 
   cmd.Parse (argc,argv);
@@ -54,8 +54,8 @@ main (int argc, char *argv[])
       LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
     }
 
-  nCsma1 = nCsma1 == 0 ? 1 : nCsma1;
-  nCsma2 = nCsma2 == 0 ? 1 : nCsma2;
+//  nCsma1 = nCsma1 == 0 ? 1 : nCsma1;
+//  nCsma2 = nCsma2 == 0 ? 1 : nCsma2;
 
 
   Ptr<Node> casa  = CreateObject<Node> ();
